@@ -37,7 +37,7 @@ export const ImageGallery = ({ wordSearch }) => {
           } else {
             page > 1
               ? setGallery(stateGallery => [...stateGallery, ...gallery.hits])
-              : setGallery([...gallery.hits]);
+              : setGallery(gallery.hits);
           }
         })
         .catch(error => setError(error))
